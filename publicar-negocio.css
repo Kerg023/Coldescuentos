@@ -1,0 +1,721 @@
+/* =========================================================
+   PÁGINA PUBLICAR MI NEGOCIO
+========================================================= */
+
+.publish-page {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.nav-actions{
+    font-size: 13px;
+
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.publish-hero {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 65px;
+    padding: 72px 0 82px;
+}
+
+
+.publish-hero h1 {
+    font-size: clamp(40px,4.6vw,64px);
+    line-height: 1.07;
+    letter-spacing: -3px;
+    font-weight: 800;
+}
+
+
+.publish-hero h1 span {
+    color: #F4E02A;
+}
+
+
+.publish-hero > div > p {
+    color: var(--text-light);
+    max-width: 550px;
+    font-size: 17px;
+    margin: 24px 0 28px;
+}
+
+
+.publish-page .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: var(--yellow);
+    border: 0;
+    border-radius: 12px;
+    padding: 15px 22px;
+    color: var(--black);
+    font: 700 14px Inter,sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+.publish-page .primary-button:hover {
+    background: var(--yellow-dark);
+    transform: translateY(-2px);
+}
+
+
+.publish-perks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 23px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+.publish-perks i {
+    color: #56814b;
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   TARJETA DE PRESENTACIÓN
+========================================================= */
+
+.publish-illustration {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 36px;
+    box-shadow: var(--shadow);
+    transform: rotate(-2deg);
+}
+
+
+.publish-stamp {
+    height: 70px;
+    width: 70px;
+    display: grid;
+    place-items: center;
+    background: var(--yellow);
+    border-radius: 20px;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+
+.publish-illustration .section-label {
+    font-size: 12px;
+}
+
+
+.publish-illustration h2 {
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+    margin: 12px 0 28px;
+}
+
+
+.publish-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--background);
+    border-radius: 15px;
+}
+
+
+.publish-mini-icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    background: #fffbc9;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+
+.publish-mini strong {
+    font-size: 12px;
+}
+
+
+.publish-mini p {
+    font-size: 10px;
+    color: #777;
+    margin-top: 4px;
+}
+
+
+.publish-mini > i {
+    margin-left: auto;
+    color: #F4E02A;
+}
+
+
+.publish-float {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+    border-radius: 30px;
+    background: #111;
+    color: white;
+    padding: 9px 13px;
+    font-size: 11px;
+    transform: rotate(5deg);
+}
+
+
+.publish-float i {
+    color: var(--yellow);
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   REGISTRO DEL NEGOCIO
+========================================================= */
+
+.publish-registration {
+    scroll-margin-top: 100px;
+    padding-bottom: 85px;
+}
+
+
+.publish-heading {
+    border-top: 1px solid var(--border);
+    padding-top: 46px;
+    margin-bottom: 30px;
+}
+
+
+.publish-heading h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+    margin: 8px 0;
+}
+
+
+.publish-heading p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+
+.publish-layout {
+    display: grid;
+    grid-template-columns: minmax(0,1.65fr) minmax(0,1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.publish-form {
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+}
+
+
+.publish-form fieldset {
+    border: 0;
+    min-width: 0;
+    padding: 0 0 28px;
+    margin: 0 0 28px;
+    border-bottom: 1px solid #eee;
+}
+
+
+.publish-form legend {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.publish-form legend > span {
+    display: inline-grid;
+    place-items: center;
+    background: #fffed4;
+    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+}
+
+
+.publish-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px 16px;
+}
+
+
+.publish-full {
+    grid-column: 1/-1;
+}
+
+
+.publish-fields label {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+
+.publish-fields input:not([type=file]),
+.publish-fields select,
+.publish-fields textarea {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #e5e5e5;
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 13px 14px;
+    color: #222;
+    font: 400 13px Inter,sans-serif;
+}
+
+
+.publish-fields textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+
+.publish-fields input::placeholder,
+.publish-fields textarea::placeholder {
+    color: #919191;
+}
+
+
+.publish-fields small {
+    font-size: 11px;
+    font-weight: 400;
+    color: #777;
+}
+
+
+.publish-fields input:focus,
+.publish-fields select:focus,
+.publish-fields textarea:focus {
+    outline: 2px solid #F4E02A;
+    outline-offset: 2px;
+    background: white;
+}
+
+
+.publish-upload {
+    border: 1px dashed #ccc;
+    background: #fafafa;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 23px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.publish-upload > i {
+    font-size: 20px;
+    color: #777;
+}
+
+
+.publish-upload strong {
+    font-size: 12px;
+}
+
+
+.publish-upload input {
+    max-width: 100%;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+.publish-note {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.7;
+}
+
+
+.publish-form-end .primary-button {
+    margin-top: 18px;
+    width: 100%;
+}
+
+
+#form-status {
+    font-size: 13px;
+    margin-top: 12px;
+    color: #397445;
+}
+
+
+/* =========================================================
+   VISTA PREVIA DEL NEGOCIO
+========================================================= */
+
+.publish-sidebar {
+    position: sticky;
+    top: 105px;
+}
+
+
+.publish-preview-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+.publish-preview-label > span:last-child {
+    font-size: 10px;
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 20px;
+    color: #777;
+}
+
+
+.publish-sidebar .discount-card-item {
+    cursor: default;
+}
+
+
+.publish-sidebar .discount-card-item:hover {
+    transform: none;
+}
+
+
+.publish-cover {
+    height: 210px;
+    position: relative;
+    background: linear-gradient(135deg,#fffee1,#f1ecc7);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+
+.publish-cover > i {
+    font-size: 66px;
+    color: #b6ac55;
+}
+
+
+.publish-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+
+.publish-preview-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 17px;
+    background: white;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+}
+
+
+.publish-sidebar .card-content h3,
+.publish-sidebar .card-content p,
+.publish-offer {
+    overflow-wrap: anywhere;
+}
+
+
+.publish-offer {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 12px;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: #F4E02A !important;
+}
+
+
+/* =========================================================
+   PRÓXIMOS PASOS
+========================================================= */
+
+.publish-next {
+    margin-top: 26px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+
+.publish-next h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+
+.publish-next ol {
+    list-style: none;
+    counter-reset: steps;
+}
+
+
+.publish-next li {
+    position: relative;
+    counter-increment: steps;
+    padding-left: 34px;
+    margin-bottom: 19px;
+}
+
+
+.publish-next li:last-child {
+    margin-bottom: 0;
+}
+
+
+.publish-next li:before {
+    content: counter(steps);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #f5f5f7;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.publish-next strong {
+    font-size: 12px;
+}
+
+
+.publish-next p {
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+    line-height: 1.6;
+}
+
+
+.publish-back {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN MÓVIL
+========================================================= */
+
+.publish-mobile-nav:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 22px 25px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+
+.publish-page [hidden] {
+    display: none !important;
+}
+
+
+.publish-page a:focus-visible,
+.publish-page button:focus-visible {
+    outline: 2px solid #F4E02A;
+    outline-offset: 4px;
+}
+
+
+.publish-page .section-label {
+    color: #F4E02A;
+}
+
+
+.publish-page .card-content {
+    background: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+    .publish-hero {
+        gap: 30px;
+    }
+
+    .publish-illustration {
+        padding: 27px;
+    }
+
+    .publish-float {
+        font-size: 9px;
+        right: 10px;
+    }
+
+    .publish-layout {
+        grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+        gap: 22px;
+    }
+
+    .publish-form {
+        padding: 24px;
+    }
+
+    .publish-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .publish-hero h1 {
+        letter-spacing: -2px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+========================================================= */
+
+@media (max-width: 700px) {
+    .publish-page {
+        padding: 0 20px;
+    }
+
+    .publish-hero {
+        grid-template-columns: 1fr;
+        padding: 40px 0 45px;
+        gap: 35px;
+    }
+
+    .publish-hero h1 {
+        font-size: 44px;
+    }
+
+    .publish-hero > div > p {
+        font-size: 15px;
+    }
+
+    .publish-illustration {
+        transform: none;
+        padding: 25px;
+    }
+
+    .publish-illustration h2 {
+        font-size: 30px;
+    }
+
+    .publish-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .publish-form,
+    .publish-sidebar {
+        width: 100%;
+    }
+
+    .publish-sidebar {
+        position: static;
+    }
+
+    .publish-heading h2 {
+        font-size: 27px;
+    }
+
+    .publish-form {
+        padding: 22px 18px;
+    }
+
+    .publish-perks {
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .publish-registration {
+        padding-bottom: 45px;
+    }
+
+    .publish-form legend {
+        font-size: 15px;
+    }
+
+    .publish-preview-label {
+        margin-top: 8px;
+    }
+
+    .publish-page .hero-tag {
+        font-size: 11px;
+    }
+
+    .publish-cover {
+        height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD - MOVIMIENTO REDUCIDO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .publish-page * {
+        transition: none !important;
+    }
+
+}

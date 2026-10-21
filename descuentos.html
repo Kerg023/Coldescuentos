@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Coldescuentos | Todos los descuentos</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="descuentos.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+
+            <img src="logo-coldescuentos.png"
+                 alt="Coldescuentos">
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="index.html#categorias">
+                Categorías
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a href="descuentos.html"
+               class="active">
+                Descuentos
+            </a>
+
+            <a href="index.html#negocios">
+                Negocios
+            </a>
+
+            <a href="index.html#planes">
+                Planes
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button class="login-button">
+                Iniciar sesión
+            </button>
+
+            <button class="business-button">
+                Publica tu negocio
+            </button>
+
+        </div>
+
+
+        <button class="mobile-menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="all-discounts-page">
+
+
+    <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
+
+    <section class="discounts-hero">
+
+        <div>
+
+            <span class="section-label">
+                Explora nuestras ofertas
+            </span>
+
+            <h1>
+                Todos los descuentos
+            </h1>
+
+            <p>
+                Encuentra promociones, beneficios y ofertas
+                exclusivas de negocios en Colombia.
+            </p>
+
+        </div>
+
+
+        <div class="discounts-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchDiscount"
+                placeholder="Busca negocios, servicios o descuentos..."
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTENIDO
+    ====================================================== -->
+
+    <section class="discounts-browser">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="discounts-sidebar">
+
+
+            <div class="sidebar-box">
+
+                <h3>
+                    Categorías
+                </h3>
+
+
+                <div class="category-filter active"
+                     data-category="Todas">
+
+                    <span>
+                        <i class="fa-solid fa-border-all"></i>
+                        Todas
+                    </span>
+
+                    <strong>50</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Alimentación">
+
+                    <span>
+                        <i class="fa-solid fa-utensils"></i>
+                        Alimentación
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Educación">
+
+                    <span>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Educación
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Salud & Belleza">
+
+                    <span>
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        Salud & Belleza
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Marketing">
+
+                    <span>
+                        <i class="fa-solid fa-bullhorn"></i>
+                        Marketing
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Hogar">
+
+                    <span>
+                        <i class="fa-solid fa-house"></i>
+                        Hogar
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Tecnología">
+
+                    <span>
+                        <i class="fa-solid fa-laptop"></i>
+                        Tecnología
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Moda & Estilo">
+
+                    <span>
+                        <i class="fa-solid fa-shirt"></i>
+                        Moda & Estilo
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Deportes">
+
+                    <span>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        Deportes
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+
+                <div class="category-filter"
+                     data-category="Servicios">
+
+                    <span>
+                        <i class="fa-solid fa-briefcase"></i>
+                        Servicios
+                    </span>
+
+                    <strong>5</strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Filtros -->
+
+            <div class="sidebar-box quick-filters">
+
+                <h3>
+                    Filtros rápidos
+                </h3>
+
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Solo favoritos
+
+                </label>
+
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Descuentos activos
+
+                </label>
+
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Nuevos negocios
+
+                </label>
+
+            </div>
+
+
+            <div class="sidebar-business">
+
+                <span>
+                    ¿Eres un negocio?
+                </span>
+
+                <h3>
+                    Llega a más clientes.
+                </h3>
+
+                <p>
+                    Publica tus ofertas en Coldescuentos.
+                </p>
+
+                <button>
+                    Publica tu negocio
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             RESULTADOS
+        ================================================== -->
+
+        <div class="discounts-results">
+
+
+            <div class="results-header">
+
+                <div>
+
+                    <span class="section-label">
+                        Ofertas disponibles
+                    </span>
+
+                    <h2 id="categoryTitle">
+                        Todos los negocios
+                    </h2>
+
+                    <p id="resultsText">
+                        Encuentra las mejores promociones para ti.
+                    </p>
+
+                </div>
+
+
+                <select id="sortDiscounts">
+
+                    <option value="popular">
+                        Más populares
+                    </option>
+
+                    <option value="discount">
+                        Mayor descuento
+                    </option>
+
+                    <option value="new">
+                        Más recientes
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                class="all-discounts-grid"
+                id="discountsContainer">
+            </div>
+
+
+            <div class="pagination">
+
+                <button>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button class="active">
+                    1
+                </button>
+
+                <button>
+                    2
+                </button>
+
+                <button>
+                    3
+                </button>
+
+                <span>...</span>
+
+                <button>
+                    5
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SUSCRIPCIÓN
+    ====================================================== -->
+
+    <section class="subscription-banner">
+
+        <div class="subscription-icon">
+
+            <i class="fa-solid fa-envelope-open-text"></i>
+
+        </div>
+
+
+        <div class="subscription-text">
+
+            <strong>
+                No te pierdas ninguna oferta
+            </strong>
+
+            <span>
+                Recibe las mejores promociones directamente en tu correo.
+            </span>
+
+        </div>
+
+
+        <form class="subscription-form">
+
+            <input
+                type="email"
+                placeholder="Tu correo electrónico"
+            >
+
+            <button type="submit">
+                Suscribirme
+            </button>
+
+        </form>
+
+    </section>
+
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Coldescuentos. Todos los derechos reservados.
+        </span>
+
+        <span>
+            Lo tiene todo.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="descuentos.js"></script>
+
+</body>
+
+</html>

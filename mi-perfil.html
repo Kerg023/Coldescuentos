@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Mi perfil | Coldescuentos
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mi-perfil.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img
+                    class="logo-image"
+                    src="logo-coldescuentos-transparente.png"
+                    alt="Coldescuentos"
+                    >
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html#inicio">
+                        Inicio
+                    </a>
+                    <a href="index.html#categorias">
+                        Categorías
+                        <i class="fa-solid fa-chevron-down">
+                        </i>
+                    </a>
+                    <a href="descuentos.html">
+                        Descuentos
+                    </a>
+                    <a href="index.html#negocios">
+                        Negocios
+                    </a>
+                    <a href="index.html#planes">
+                        Planes
+                    </a>
+                </nav>
+
+                <div class="nav-actions">
+                    <a class="login-button" href="mi-perfil.html" aria-current="page">
+                        Mi perfil
+                    </a>
+                    <a class="business-button" href="publicar-negocio.html">
+                        Publica tu negocio
+                    </a>
+                </div>
+                <a class="profile-mobile-home" href="index.html" aria-label="Volver al inicio">
+                    <i class="fa-solid fa-house" aria-hidden="true">
+                    </i>
+                </a>
+            </div>
+        </header>
+
+
+        <!-- =========================================================
+        MI PERFIL
+        ========================================================= -->
+
+        <main class="profile-page">
+            <div class="profile-heading">
+                <span class="section-label">
+                    Tu espacio en Coldescuentos
+                </span>
+                <h1>
+                    Mi perfil
+                </h1>
+                <p>
+                    Tu información y tus beneficios, en un solo lugar.
+                </p>
+            </div>
+            <div class="profile-layout">
+
+                <!-- NAVEGACIÓN DE LA CUENTA -->
+
+                <aside class="profile-sidebar">
+                    <div class="profile-identity">
+                        <div class="profile-avatar" id="profile-avatar" aria-hidden="true">
+                            C
+                        </div>
+                        <h2 id="profile-display-name">
+                            Tu perfil
+                        </h2>
+                        <p id="profile-display-email">
+                            Completa tus datos
+                        </p>
+                        <span class="profile-demo-badge">
+                            Perfil de demostración
+                        </span>
+                    </div>
+                    <nav class="profile-navigation" aria-label="Mi cuenta">
+                        <a href="#mis-datos" class="active">
+                            <i class="fa-regular fa-user" aria-hidden="true">
+                            </i>
+                            Mis datos
+                        </a>
+                        <a href="#mi-tarjeta">
+                            <i class="fa-regular fa-credit-card" aria-hidden="true">
+                            </i>
+                            Mi tarjeta digital
+                        </a>
+                        <a href="#mis-favoritos">
+                            <i class="fa-regular fa-heart" aria-hidden="true">
+                            </i>
+                            Mis favoritos
+                        </a>
+                        <a href="#mi-plan">
+                            <i class="fa-solid fa-crown" aria-hidden="true">
+                            </i>
+                            Mi plan
+                        </a>
+                    </nav>
+
+                    <button type="button" class="profile-logout" id="profile-logout">
+                        <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true">
+                        </i>
+                        Salir de la demostración
+                    </button>
+                </aside>
+
+                <div class="profile-content">
+                    <section class="profile-welcome">
+                        <div>
+                            <span>
+                                Qué bueno tenerte aquí
+                            </span>
+                            <h2 id="profile-greeting">
+                                ¡Hola! ¿Qué quieres descubrir hoy?
+                            </h2>
+                            <p>
+                                Encuentra tu próximo lugar favorito y aprovecha sus beneficios.
+                            </p>
+                            <a href="descuentos.html">
+                                Explorar descuentos
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true">
+                                </i>
+                            </a>
+                        </div>
+                        <div class="profile-welcome-icon" aria-hidden="true">
+                            %
+                        </div>
+                    </section>
+
+
+                    <!-- DATOS PERSONALES -->
+
+                    <section class="profile-panel" id="mis-datos" aria-labelledby="profile-data-title">
+                        <div class="profile-panel-heading">
+                            <div>
+                                <h2 id="profile-data-title">
+                                    Mis datos personales
+                                </h2>
+                                <p>
+                                    Mantén tu información al día.
+                                </p>
+                            </div>
+                            <i class="fa-regular fa-user" aria-hidden="true">
+                            </i>
+                        </div>
+                        <form id="profile-form">
+                            <div class="profile-fields">
+                                <label for="profile-name">
+                                    Nombres *
+                                    <input id="profile-name" name="nombres" required maxlength="60" autocomplete="given-name" placeholder="Tus nombres">
+                                </label>
+                                <label for="profile-lastname">
+                                    Apellidos
+                                    <input id="profile-lastname" name="apellidos" maxlength="80" autocomplete="family-name" placeholder="Tus apellidos">
+                                </label>
+                                <label for="profile-email">
+                                    Correo electrónico *
+                                    <input id="profile-email" name="correo" type="email" required maxlength="160" autocomplete="email" placeholder="tu@correo.com">
+                                </label>
+                                <label for="profile-phone">
+                                    Celular
+                                    <input id="profile-phone" name="celular" type="tel" maxlength="22" pattern="[+0-9() \-]{7,22}" autocomplete="tel" placeholder="Ej. 300 123 4567">
+                                </label>
+                                <label for="profile-city">
+                                    Ciudad
+                                    <input id="profile-city" name="ciudad" maxlength="80" autocomplete="address-level2" placeholder="Ej. Ibagué">
+                                </label>
+                            </div>
+                            <div class="profile-form-actions">
+                                <p>
+                                    Vista previa: tus datos se guardan únicamente en este navegador.
+                                </p>
+                                <button type="submit" class="profile-primary">
+                                    Guardar cambios
+                                    <i class="fa-solid fa-check" aria-hidden="true">
+                                    </i>
+                                </button>
+                            </div>
+                            <p id="profile-status" role="status" tabindex="-1">
+                            </p>
+                        </form>
+
+                    </section>
+
+                    <div class="profile-bottom-grid">
+
+                        <!-- TARJETA DIGITAL -->
+
+                        <section class="profile-panel" id="mi-tarjeta" aria-labelledby="card-title">
+                            <div class="profile-panel-heading">
+                                <div>
+                                    <h2 id="card-title">
+                                        Mi tarjeta digital
+                                    </h2>
+                                    <p>
+                                        Tus beneficios siempre contigo.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="profile-digital-card">
+                                <img src="logo-coldescuentos-transparente.png" alt="Coldescuentos">
+                                <span>
+                                    Tu próxima forma de ahorrar
+                                </span>
+                                <strong id="card-holder">
+                                    Tu nombre aquí
+                                </strong>
+                                <div>
+                                    <span>
+                                        Vista previa
+                                    </span>
+                                    <i class="fa-solid fa-credit-card" aria-hidden="true">
+                                    </i>
+                                </div>
+                            </div>
+                            <p class="profile-muted">
+                                Tu tarjeta y su código estarán disponibles cuando tengas una cuenta y un plan activos.
+                            </p>
+                        </section>
+
+
+                        <!-- PLAN -->
+
+                        <section class="profile-panel" id="mi-plan" aria-labelledby="plan-title">
+                            <div class="profile-panel-heading">
+                                <div>
+                                    <h2 id="plan-title">
+                                        Mi plan
+                                    </h2>
+                                    <p>
+                                        Más oportunidades para disfrutar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="profile-plan-icon">
+                                <i class="fa-solid fa-crown" aria-hidden="true">
+                                </i>
+                            </div>
+                            <h3>
+                                Descubre tu próximo beneficio
+                            </h3>
+                            <p class="profile-muted">
+                                Esta demostración no tiene una suscripción vinculada. Conoce las opciones de Coldescuentos.
+                            </p>
+                            <a class="profile-secondary" href="index.html#planes">
+                                Ver planes
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true">
+                                </i>
+                            </a>
+                        </section>
+
+                    </div>
+
+                    <!-- FAVORITOS -->
+
+                    <section class="profile-panel" id="mis-favoritos" aria-labelledby="favorites-title">
+                        <div class="profile-panel-heading">
+                            <div>
+                                <h2 id="favorites-title">
+                                    Mis favoritos
+                                </h2>
+                                <p>
+                                    Un espacio para los negocios que más te gustan.
+                                </p>
+                            </div>
+                            <i class="fa-regular fa-heart" aria-hidden="true">
+                            </i>
+                        </div>
+                        <div class="profile-empty">
+                            <div>
+                                <i class="fa-regular fa-heart" aria-hidden="true">
+                                </i>
+                            </div>
+                            <h3>
+                                Aquí estarán tus favoritos
+                            </h3>
+                            <p>
+                                Explora los negocios de tu ciudad. La sincronización de favoritos estará disponible al conectar tu cuenta.
+                            </p>
+                            <a class="profile-secondary" href="descuentos.html">
+                                Descubrir negocios
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true">
+                                </i>
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="logo-coldescuentos.png">
+                    </a>
+                    <p>
+                        Descubre descuentos y beneficios
+                        de negocios en Colombia.
+                    </p>
+                    <div class="socials">
+                        <a href="index.html">
+                            <i class="fa-brands fa-facebook-f">
+                            </i>
+                        </a>
+                        <a href="index.html">
+                            <i class="fa-brands fa-instagram">
+                            </i>
+                        </a>
+                        <a href="index.html">
+                            <i class="fa-brands fa-whatsapp">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>
+                        Coldescuentos
+                    </h3>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                    <a href="index.html">
+                        Sobre nosotros
+                    </a>
+                    <a href="index.html">
+                        Contacto
+                    </a>
+                    <a href="index.html">
+                        Planes
+                    </a>
+                </div>
+                <div class="footer-column">
+                    <h3>
+                        Ayuda
+                    </h3>
+                    <a href="index.html">
+                        Preguntas frecuentes
+                    </a>
+                    <a href="index.html">
+                        Términos y condiciones
+                    </a>
+                    <a href="index.html">
+                        Política de privacidad
+                    </a>
+                </div>
+                <div class="footer-business">
+                    <span>
+                        ¿Tienes un negocio?
+                    </span>
+                    <h3>
+                        Llega a más clientes.
+                    </h3>
+                    <a href="index.html">
+                        Publicar mi negocio
+                        <i class="fa-solid fa-arrow-right">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>
+                    © 2026 Coldescuentos. Todos los derechos reservados.
+                </span>
+                <span>
+                    Ibagué, Tolima, Colombia
+                </span>
+            </div>
+        </footer>
+
+        <script src="mi-perfil.js">
+        </script>
+    </body>
+</html>
