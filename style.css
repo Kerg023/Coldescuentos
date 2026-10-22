@@ -3102,3 +3102,54 @@ input {
     }
 
 }
+
+
+/* =========================================================
+   ANUNCIOS DESTACADOS - CARRUSEL MÓVIL
+========================================================= */
+
+@media (max-width: 700px) {
+
+    #descuentos .discounts-grid {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding: 8px 0 22px;
+        cursor: grab;
+    }
+
+    #descuentos .discounts-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    #descuentos .discounts-grid > .discount-card-item {
+        flex: 0 0 86%;
+        min-width: 0;
+        scroll-snap-align: start;
+    }
+
+    #descuentos .discounts-grid > .discount-card-item:hover {
+        transform: none;
+    }
+
+    #descuentos .discounts-grid.is-dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+        user-select: none;
+    }
+
+    #descuentos .discounts-grid.is-dragging * {
+        cursor: grabbing;
+        user-select: none;
+    }
+
+    #descuentos .discounts-grid:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 4px;
+        border-radius: 12px;
+    }
+
+}

@@ -254,3 +254,114 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* =========================================================
+   ANUNCIOS DESTACADOS - DESLIZAMIENTO EN CELULAR
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const carousel = document.querySelector("#descuentos .discounts-grid");
+    if (!carousel) return;
+
+    const mobile = window.matchMedia("(max-width: 700px)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let pointerId = null;
+    let startX = 0;
+    let startY = 0;
+    let initialScroll = 0;
+    let dragging = false;
+    let blockClickUntil = 0;
+
+    carousel.setAttribute("tabindex", "0");
+    carousel.setAttribute("role", "region");
+    carousel.setAttribute("aria-label", "Anuncios destacados. Desliza para ver más negocios.");
+
+    carousel.addEventListener("pointerdown", (event) => {
+
+        if (!mobile.matches || event.pointerType !== "mouse" || event.button !== 0) return;
+
+        pointerId = event.pointerId;
+        startX = event.clientX;
+        startY = event.clientY;
+        initialScroll = carousel.scrollLeft;
+        dragging = false;
+        blockClickUntil = 0;
+
+    });
+
+    window.addEventListener("pointermove", (event) => {
+
+        if (event.pointerId !== pointerId) return;
+
+        const deltaX = event.clientX - startX;
+        const deltaY = event.clientY - startY;
+
+        if (!dragging) {
+            if (Math.abs(deltaX) < 6 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+            dragging = true;
+            carousel.classList.add("is-dragging");
+            carousel.setPointerCapture(pointerId);
+        }
+
+        event.preventDefault();
+        carousel.scrollLeft = initialScroll - deltaX;
+
+    }, { passive: false });
+
+    function endDrag(event) {
+
+        if (event && event.pointerId !== pointerId) return;
+
+        const wasDragging = dragging;
+        const previousPointer = pointerId;
+        pointerId = null;
+        dragging = false;
+        carousel.classList.remove("is-dragging");
+
+        if (previousPointer !== null && carousel.hasPointerCapture(previousPointer)) {
+            carousel.releasePointerCapture(previousPointer);
+        }
+
+        if (wasDragging) {
+            // Arrastrar las tarjetas no debe abrir la ventana del negocio.
+            blockClickUntil = Date.now() + 350;
+        }
+
+    }
+
+    window.addEventListener("pointerup", endDrag);
+    window.addEventListener("pointercancel", endDrag);
+    carousel.addEventListener("lostpointercapture", endDrag);
+    window.addEventListener("blur", () => endDrag());
+    mobile.addEventListener("change", () => endDrag());
+
+    carousel.addEventListener("click", (event) => {
+
+        if (Date.now() < blockClickUntil) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+        }
+
+    }, true);
+
+    carousel.addEventListener("dragstart", (event) => {
+        if (mobile.matches) event.preventDefault();
+    });
+
+    carousel.addEventListener("keydown", (event) => {
+
+        if (!mobile.matches || event.target !== carousel) return;
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+
+        event.preventDefault();
+        const card = carousel.querySelector(".discount-card-item");
+        const distance = card ? card.getBoundingClientRect().width + 16 : carousel.clientWidth;
+        carousel.scrollBy({
+            left: event.key === "ArrowRight" ? distance : -distance,
+            behavior: reducedMotion.matches ? "auto" : "smooth"
+        });
+
+    });
+
+});
